@@ -6,7 +6,9 @@ import android.support.constraint.ConstraintSet
 import android.support.transition.AutoTransition
 import android.support.transition.Transition
 import android.support.transition.TransitionManager
+import android.view.View
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.purchase_details_layout.*
 
 class MainActivity: AppCompatActivity() {
 
@@ -18,8 +20,9 @@ class MainActivity: AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        setOne.clone(root)
+        description.visibility = View.INVISIBLE
 
+        setOne.clone(root)
         setTwo.clone(this, R.layout.activity_main_two)
 
         toolbar.setNavigationOnClickListener {
@@ -33,12 +36,14 @@ class MainActivity: AppCompatActivity() {
     }
 
     fun animate() {
-
-        val t = AutoTransition()
-
-
-        TransitionManager.beginDelayedTransition(root, t)
-        if (!changed) setTwo.applyTo(root) else setOne.applyTo(root)
+        TransitionManager.beginDelayedTransition(root)
+        if (!changed) {
+            setTwo.applyTo(root)
+            description.visibility = View.VISIBLE
+        } else {
+            setOne.applyTo(root)
+            description.visibility = View.INVISIBLE
+        }
         changed = !changed
     }
 

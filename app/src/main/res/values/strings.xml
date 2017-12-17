@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Animation Challenge One</string>
+    <string name="purchase_description">You are placing a good for day market order to buy shares of something. Your order will be executed at the best available buy.</string>
 </resources>
