@@ -9,17 +9,14 @@
     android:background="@color/green"
     tools:context="com.oneguygames.animationchallengeone.MainActivity">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout"
+    <include
+        android:id="@+id/numberPad"
+        layout="@layout/number_pad_layout"
         android:layout_width="0dp"
         android:layout_height="230dp"
-        android:background="@color/white"
-        android:elevation="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
-
-    </android.support.constraint.ConstraintLayout>
+        app:layout_constraintStart_toStartOf="parent"/>
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/floatingActionButton"
@@ -32,7 +29,7 @@
         android:visibility="visible"
         app:backgroundTint="@color/green"
         app:fabSize="normal"
-        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout"
+        app:layout_constraintBottom_toBottomOf="@+id/numberPad"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/ic_check_black_24dp"/>
 
