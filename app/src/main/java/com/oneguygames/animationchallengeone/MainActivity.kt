@@ -22,6 +22,9 @@ class MainActivity: AppCompatActivity() {
 
         setTwo.clone(this, R.layout.activity_main_two)
 
+        toolbar.setNavigationOnClickListener {
+            animate()
+        }
 
         floatingActionButton.setOnClickListener {
            animate()
