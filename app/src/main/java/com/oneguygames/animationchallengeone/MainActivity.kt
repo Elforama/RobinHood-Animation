@@ -12,9 +12,9 @@ import kotlinx.android.synthetic.main.purchase_details_layout.*
 
 class MainActivity: AppCompatActivity() {
 
-    var changed = false
-    val setOne = ConstraintSet()
-    val setTwo = ConstraintSet()
+    private var changed = false
+    private val setOne = ConstraintSet()
+    private val setTwo = ConstraintSet()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class MainActivity: AppCompatActivity() {
 
     }
 
-    fun animate() {
+    private fun animate() {
         TransitionManager.beginDelayedTransition(root)
         if (!changed) {
             setTwo.applyTo(root)

@@ -8,4 +8,14 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="NumberInput">
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_width">64dp</item>
+        <item name="android:textSize">32dp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:gravity">center</item>
+        <item name="android:clickable">true</item>
+        <item name="android:background">@android:drawable/list_selector_background</item>
+    </style>
+
 </resources>
